@@ -9,27 +9,25 @@ const StepsDisplay = () => {
     window.open('https://glstrck.com/aff_c?offer_id=2301&aff_id=25969', '_blank');
   };
 
-  return <div className="space-y-4 max-w-2xl mx-auto px-4">
-      {/* Program Information */}
-      
-      {/* Steps Section - More compact on mobile */}
-      <div className="grid gap-3">
-        <h3 className="font-medium text-center">Follow These Steps:</h3>
+  return (
+    <div className="space-y-6 max-w-2xl mx-auto px-4">
+      {/* Steps Section */}
+      <div className="grid gap-4">
+        <h2 className="text-2xl font-bold text-center mb-2">$1,000 Credit Line Approval</h2>
+        <p className="text-center text-gray-600 mb-4">Follow these simple steps to check your eligibility</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard number="1" title="Eligibility Check" description="Confirm your qualification for the credit line program" />
-          
           <StepCard number="2" title="Identity Verification" description="Secure verification process to protect your information" />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard number="3" title="Application Review" description="Your application is reviewed by our financial team" />
-          
           <StepCard number="4" title="Receive your $1,000 Credit Line" description="Access to funds for qualified applicants" highlight />
         </div>
 
-        {/* CTA Button moved directly after steps */}
-        <div className="text-center mt-2">
+        {/* CTA Button directly after steps */}
+        <div className="text-center mt-6">
           <button 
             onClick={handleCheckEligibility} 
             className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 bg-stimulus-green hover:bg-stimulus-green/90 text-white font-bold text-xl py-4 px-6 rounded-lg shadow-lg transition-all duration-300"
@@ -40,17 +38,7 @@ const StepsDisplay = () => {
         </div>
       </div>
       
-      {/* Testimonials Section - Shortened for mobile */}
-      <div className="mt-4">
-        <h3 className="text-lg font-semibold mb-3 text-center">What People Are Saying</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <TestimonialCard name="Sarah Johnson" location="Texas" text="I was skeptical at first, but after applying I was approved for a $1,000 credit line within days. This program was a true lifesaver for our family." />
-          <TestimonialCard name="Michael Rodriguez" location="Florida" text="The application process was incredibly simple. I filled out the form in under 10 minutes and received my $1,000 credit line approval the following week." />
-          <TestimonialCard name="Jennifer Williams" location="Ohio" text="As a single mother of two, this credit line helped me cover unexpected bills and make necessary purchases. I'm incredibly grateful." />
-        </div>
-      </div>
-      
-      {/* Security notice moved to bottom of page */}
+      {/* Security notice at bottom of page */}
       <div className="mt-4 flex justify-center">
         <div className="flex items-center bg-blue-50 px-4 py-2 rounded-md text-sm border border-blue-100 max-w-md">
           <ShieldCheck className="h-4 w-4 mr-2 text-stimulus-blue flex-shrink-0" />
@@ -58,14 +46,15 @@ const StepsDisplay = () => {
         </div>
       </div>
       
-      {/* Disclaimer at the bottom of page */}
+      {/* Disclaimer at the very bottom */}
       <div className="text-center mt-2">
         <div className="bg-gray-100 p-3 rounded-lg text-xs text-gray-600 text-center mb-4">
           <ShieldCheck className="h-4 w-4 mx-auto mb-1 text-stimulus-blue" />
           <p>This site is not affiliated with any financial institution. Eligibility for credit programs varies and results are subject to verification.</p>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 // StepCard component definition
@@ -80,53 +69,30 @@ const StepCard = ({
   description: string;
   highlight?: boolean;
 }) => {
-  return <Card className={`transition-all duration-300 ${highlight ? 'border-stimulus-green' : 'border-gray-200'} shadow-sm`}>
-      <CardHeader className="flex flex-row items-center gap-2 py-2 px-3">
+  return (
+    <Card className={`transition-all duration-300 ${highlight ? 'border-stimulus-green' : 'border-gray-200'} shadow-sm`}>
+      <CardHeader className="flex flex-row items-center gap-2 py-3 px-4">
         <div className={`${highlight ? 'bg-stimulus-green' : 'bg-stimulus-blue'} text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold`}>
           {number}
         </div>
         <div>
-          <CardTitle className={`${highlight ? 'text-base' : 'text-sm'}`}>
+          <CardTitle className={`${highlight ? 'text-lg' : 'text-base'}`}>
             {title}
             {highlight && <span className="text-stimulus-green font-bold"> $1,000</span>}
           </CardTitle>
         </div>
       </CardHeader>
-      <CardContent className="py-1 px-3 text-xs md:text-sm">
+      <CardContent className="py-2 px-4">
         <p className="text-gray-600">{description}</p>
-        {highlight && <div className="mt-1 flex items-center text-stimulus-green text-xs">
-            <CreditCard className="h-3 w-3 mr-1" />
+        {highlight && (
+          <div className="mt-2 flex items-center text-stimulus-green text-sm">
+            <CreditCard className="h-4 w-4 mr-1" />
             <span className="font-medium">Credit line available to eligible applicants</span>
-          </div>}
+          </div>
+        )}
       </CardContent>
-    </Card>;
-};
-
-// Testimonial Card Component
-const TestimonialCard = ({
-  name,
-  location,
-  text
-}: {
-  name: string;
-  location: string;
-  text: string;
-}) => {
-  return <div className="bg-white border border-gray-100 rounded-lg p-3 shadow-sm">
-      <div className="flex items-center mb-1">
-        <div className="text-stimulus-green">
-          <CheckCircle2 className="h-4 w-4" />
-        </div>
-        <div className="ml-2">
-          <h4 className="font-medium text-sm">{name}</h4>
-          <p className="text-xs text-gray-500">{location}</p>
-        </div>
-      </div>
-      <p className="text-gray-600 text-xs md:text-sm">{text}</p>
-      <div className="mt-1 flex">
-        {[1, 2, 3, 4, 5].map(star => <span key={star} className="text-yellow-400 text-xs">★</span>)}
-      </div>
-    </div>;
+    </Card>
+  );
 };
 
 export default StepsDisplay;
