@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DollarSign } from 'lucide-react';
+import { CreditCard } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -9,15 +9,15 @@ const Header = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center justify-center mb-2">
             <div className="bg-stimulus-blue rounded-full p-2 mr-3">
-              <DollarSign className="h-5 w-5 text-white" />
+              <CreditCard className="h-5 w-5 text-white" />
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center font-sans text-gray-800 tracking-tight">
-              2025 <span className="text-stimulus-green font-black">$1,400</span> STIMULUS ASSISTANCE RELIEF PROGRAM
+              GET APPROVED FOR A <span className="text-stimulus-green font-black">$1,000</span> CREDIT LINE TODAY
             </h1>
           </div>
           
           <p className="text-sm sm:text-base mt-1 text-center max-w-xl text-gray-600">
-            Helping eligible Americans with groceries, rent, and everyday expenses
+            Helping eligible applicants access funds for purchases, bills, and everyday expenses
           </p>
         </div>
       </div>

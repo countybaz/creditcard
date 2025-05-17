@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className="bg-gray-50 py-6 border-t border-gray-200 mt-8">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <h3 className="text-base font-semibold text-gray-700">Stimulus Support Program</h3>
-          <p className="text-sm text-gray-500">Helping eligible Americans receive financial assistance</p>
+          <h3 className="text-base font-semibold text-gray-700">Credit Line Approval Program</h3>
+          <p className="text-sm text-gray-500">Helping eligible applicants access financial resources</p>
         </div>
         
         {/* Trust indicators */}
@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
             
             <div className="border-t border-gray-200 pt-3 mt-3">
-              <p>&copy; {currentYear} Stimulus Support Program. All rights reserved.</p>
+              <p>&copy; {currentYear} Credit Line Program. All rights reserved.</p>
             </div>
           </div>
         </div>

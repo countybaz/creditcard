@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { CheckCircle2, DollarSign, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, CreditCard, ShieldCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const StepsDisplay = () => {
   const handleCheckEligibility = () => {
-    window.open('https://glstrck.com/aff_c?offer_id=1421&aff_id=25969', '_blank');
+    window.open('https://glstrck.com/aff_c?offer_id=2301&aff_id=25969', '_blank');
   };
 
   return <div className="space-y-4 max-w-2xl mx-auto px-4">
@@ -17,15 +17,15 @@ const StepsDisplay = () => {
         <h3 className="font-medium text-center">Follow These Steps:</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <StepCard number="1" title="Eligibility Check" description="Confirm your qualification for the stimulus program" />
+          <StepCard number="1" title="Eligibility Check" description="Confirm your qualification for the credit line program" />
           
           <StepCard number="2" title="Identity Verification" description="Secure verification process to protect your information" />
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <StepCard number="3" title="Application Review" description="Your application is reviewed by our team" />
+          <StepCard number="3" title="Application Review" description="Your application is reviewed by our financial team" />
           
-          <StepCard number="4" title="Receive your $1,400 Stimulus Check" description="Direct payment to qualified recipients" highlight />
+          <StepCard number="4" title="Receive your $1,000 Credit Line" description="Access to funds for qualified applicants" highlight />
         </div>
 
         {/* CTA Button moved directly after steps */}
@@ -36,7 +36,7 @@ const StepsDisplay = () => {
           >
             CHECK ELIGIBILITY NOW
           </button>
-          <p className="text-xs text-gray-500 mt-2">Click to see if you qualify for the stimulus assistance program</p>
+          <p className="text-xs text-gray-500 mt-2">Click to see if you qualify for the $1,000 credit line program</p>
         </div>
       </div>
       
@@ -44,9 +44,9 @@ const StepsDisplay = () => {
       <div className="mt-4">
         <h3 className="text-lg font-semibold mb-3 text-center">What People Are Saying</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <TestimonialCard name="Sarah Johnson" location="Texas" text="I was skeptical at first, but after applying I received my stimulus check within days. This program was a true lifesaver for our family." />
-          <TestimonialCard name="Michael Rodriguez" location="Florida" text="The application process was incredibly simple. I filled out the form in under 10 minutes and received my $1,400 the following week." />
-          <TestimonialCard name="Jennifer Williams" location="Ohio" text="As a single mother of two, this stimulus check helped me catch up on bills and put food on the table. I'm incredibly grateful." />
+          <TestimonialCard name="Sarah Johnson" location="Texas" text="I was skeptical at first, but after applying I was approved for a $1,000 credit line within days. This program was a true lifesaver for our family." />
+          <TestimonialCard name="Michael Rodriguez" location="Florida" text="The application process was incredibly simple. I filled out the form in under 10 minutes and received my $1,000 credit line approval the following week." />
+          <TestimonialCard name="Jennifer Williams" location="Ohio" text="As a single mother of two, this credit line helped me cover unexpected bills and make necessary purchases. I'm incredibly grateful." />
         </div>
       </div>
       
@@ -54,7 +54,7 @@ const StepsDisplay = () => {
       <div className="mt-4 flex justify-center">
         <div className="flex items-center bg-blue-50 px-4 py-2 rounded-md text-sm border border-blue-100 max-w-md">
           <ShieldCheck className="h-4 w-4 mr-2 text-stimulus-blue flex-shrink-0" />
-          <span className="text-gray-700">Secure Eligibility Check • Limited Time Program</span>
+          <span className="text-gray-700">Secure Eligibility Check • Limited Time Offer</span>
         </div>
       </div>
       
@@ -62,7 +62,7 @@ const StepsDisplay = () => {
       <div className="text-center mt-2">
         <div className="bg-gray-100 p-3 rounded-lg text-xs text-gray-600 text-center mb-4">
           <ShieldCheck className="h-4 w-4 mx-auto mb-1 text-stimulus-blue" />
-          <p>This site is not affiliated with any government agency. Eligibility for assistance programs varies and results are subject to verification.</p>
+          <p>This site is not affiliated with any financial institution. Eligibility for credit programs varies and results are subject to verification.</p>
         </div>
       </div>
     </div>;
@@ -88,15 +88,15 @@ const StepCard = ({
         <div>
           <CardTitle className={`${highlight ? 'text-base' : 'text-sm'}`}>
             {title}
-            {highlight && <span className="text-stimulus-green font-bold"> $1,400</span>}
+            {highlight && <span className="text-stimulus-green font-bold"> $1,000</span>}
           </CardTitle>
         </div>
       </CardHeader>
       <CardContent className="py-1 px-3 text-xs md:text-sm">
         <p className="text-gray-600">{description}</p>
         {highlight && <div className="mt-1 flex items-center text-stimulus-green text-xs">
-            <DollarSign className="h-3 w-3 mr-1" />
-            <span className="font-medium">Funds sent directly to eligible recipients</span>
+            <CreditCard className="h-3 w-3 mr-1" />
+            <span className="font-medium">Credit line available to eligible applicants</span>
           </div>}
       </CardContent>
     </Card>;

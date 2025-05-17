@@ -101,8 +101,8 @@ export const NotificationToast = () => {
           </div>
           <div>
             <p className="font-medium text-sm">
-              {currentNotification.name} <span className="font-normal">just received their</span>{" "}
-              <span className="text-stimulus-green font-bold">$1,400</span> <span className="font-normal">check</span>
+              {currentNotification.name} <span className="font-normal">just received</span>{" "}
+              <span className="text-stimulus-green font-bold">$1,000</span> <span className="font-normal">Credit Line!</span>
             </p>
           </div>
         </div>
