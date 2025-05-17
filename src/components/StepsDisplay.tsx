@@ -23,7 +23,7 @@ const StepsDisplay = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <StepCard number="3" title="Application Review" description="Your application is reviewed by our financial team" />
-          <StepCard number="4" title="Receive your $1,000 Credit Line" description="Access to funds for qualified applicants" highlight />
+          <StepCard number="4" title="Receive your Credit Line" description="Access to funds for qualified applicants" highlight />
         </div>
 
         {/* CTA Button directly after steps */}
